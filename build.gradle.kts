@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("de.rhm176.silk") version "v1.0.3"
+    id("de.rhm176.silk") version "v1.0.4"
     id("maven-publish")
 }
 
@@ -12,15 +12,21 @@ base {
 }
 
 repositories {
-    mavenCentral()
     maven {
         url = uri("https://jitpack.io")
         name = "JitPack"
     }
 
     // Add repositories to retrieve artifacts from in here.
+    // You should only use this when depending on other mods because
+    // Silk adds the essential maven repositories to download silk loader and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
+}
+
+// Optionally configure the silk plugin
+silk {
+    // runDir.set(project.file("game"))
 }
 
 dependencies {
