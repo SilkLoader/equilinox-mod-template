@@ -1,5 +1,4 @@
 plugins {
-    id("java")
     id("de.rhm176.silk") version "v1.0.4"
     id("maven-publish")
 }
@@ -12,11 +11,6 @@ base {
 }
 
 repositories {
-    maven {
-        url = uri("https://jitpack.io")
-        name = "JitPack"
-    }
-
     // Add repositories to retrieve artifacts from in here.
     // You should only use this when depending on other mods because
     // Silk adds the essential maven repositories to download silk loader and libraries from automatically.
