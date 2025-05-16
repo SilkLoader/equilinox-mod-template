@@ -1,5 +1,5 @@
 plugins {
-    id("de.rhm176.silk") version "v1.0.4"
+    id("de.rhm176.silk") version "v1.0.6"
     id("maven-publish")
 }
 
@@ -24,7 +24,7 @@ silk {
 }
 
 dependencies {
-    equilinox(files(silk.findEquilinoxGameJar()))
+    equilinox(silk.findEquilinoxGameJar())
 
     implementation("com.github.SilkLoader:silk-loader:${project.property("loader_version")}")
 }
