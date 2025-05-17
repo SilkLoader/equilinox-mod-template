@@ -1,5 +1,5 @@
 plugins {
-    id("de.rhm176.silk") version "v1.0.6"
+    id("de.rhm176.silk") version "v1.1.0"
     id("maven-publish")
 }
 
