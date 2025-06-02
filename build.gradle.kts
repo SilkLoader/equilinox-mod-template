@@ -41,12 +41,7 @@ tasks.processResources {
 }
 
 java {
-    val javaLanguageVersion = JavaLanguageVersion.of(rootProject.findProperty("javaVersion").toString())
-    val javaVersion = JavaVersion.toVersion(javaLanguageVersion.asInt())
-
-    toolchain {
-        languageVersion = javaLanguageVersion
-    }
+    val javaVersion = JavaVersion.toVersion(project.findProperty("javaVersion").toString())
 
     sourceCompatibility = javaVersion
     targetCompatibility = javaVersion
